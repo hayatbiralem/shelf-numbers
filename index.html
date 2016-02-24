@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shelf Numbers</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="wrapper" ng-app="ShelfNumbers" ng-controller="ShelfNumbersCtrl" ng-init="lettersSource = 'ABCDEFG'; tableCount = 6; rowCount = 3; colCount = 3;">
+	  <div class="letter-wrapper" ng-repeat="letter in letters">
+	    <div class="table-wrapper" ng-repeat="table in tables">
+	      <table>
+	        <tbody>
+	          <tr ng-repeat="row in rows">
+	            <td ng-repeat="col in cols">
+	              <div class="letter">{{letter}}</div>
+	              <div class="number">{{ ((table - 1) * (rowCount * colCount)) + (((row - 1) * colCount) + col) }}</div>
+	            </td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
