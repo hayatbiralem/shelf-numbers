@@ -1,4 +1,4 @@
-# shelf-numbers
+# Shelf Numbers
 Grid şeklindeki raflara "A1, A2, ..., A54, B1, B2, ..." şeklinde numaralar vermek üzere yazıcıdan çıktı almak için kullanılır.
 
 ---
